@@ -1,36 +1,38 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
-// import Category from "../pages/Category";
+
+// import CategoryToy from "../components/CategoryToy";
+import PopularToys from "../pages/PopularToys";
+
 
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<HomeLayout></HomeLayout>,
-    children:[
+    path: "/",
+    element: <HomeLayout></HomeLayout>,
+    children: [
       {
-        path:"",
-        element:<Home></Home>
+        path: "",
+        element: <Home></Home>,
       },
-      // {
-      //   path:"/category/:id",
-      //   element:<Category></Category>
-      // },
-   
-    ] 
+      {
+        path: "/popularToys/:title",
+        element: <PopularToys></PopularToys>,
+      },
+    ],
   },
   {
-    path:"/auth",
-    element:<h2>Authentication Layout</h2>
+    path: "/auth",
+    element: <h2>Authentication Layout</h2>,
   },
   {
-    path:"/toys",
-    element:<h2>Toys Layout</h2>
+    path: "/toys",
+    element: <h2>Toys Layout</h2>,
   },
   {
-    path:"/*",
-    element:<h2>Error440</h2>
+    path: "/*",
+    element: <h2>Error440</h2>,
   },
 ]);
 

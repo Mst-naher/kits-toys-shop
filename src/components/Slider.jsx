@@ -10,7 +10,7 @@ function Slider() {
  
 
   return (
-    <div className="w-full max-w-4xl mx-auto ">
+    <div className="w-full max-w-8xl mx-auto ">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
@@ -25,21 +25,28 @@ function Slider() {
           <img
             src="/assets/slide-1.png"
             alt="Slide 1"
-            className="w-full h-64 object-contain bg-gray-100"
+            className="w-full h-[700px] object-contain bg-gray-100"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/assets/1.png"
+            alt="Slide 2"
+            className="w-full h-[700px] object-contain bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="/assets/slider-2.png"
-            alt="Slide 2"
-            className="w-full h-64 object-contain bg-gray-100"
+            alt="Slide 3"
+            className="w-full h-[700px] object-contain bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="/assets/slide-3.jpg"
-            alt="Slide 3"
-            className="w-full h-64 object-contain bg-gray-100"
+            alt="Slide 4"
+            className="w-full h-[700px] object-contain bg-gray-100"
           />
         </SwiperSlide>
       </Swiper>

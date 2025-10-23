@@ -1,63 +1,45 @@
-import React from 'react';
+import React, { use } from 'react';
 
+const toysPromise = fetch("/categories.json").then((res)=>res.json())
 
 const PopularToys = () => {
+ const popularToys = use(toysPromise);
+ console.log(popularToys)
+ 
   return (
     <div>
       <h1 className="text-3xl font-semibold text-secondary p-3 text-center">
         Our Popular Toys
       </h1>
+      <h1>All toys are here ({popularToys.length})</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         <div className="card bg-base-100  shadow-sm">
           <figure>
             <img
-              className="w-full"
+              className="w-full h-[500px] object-cover"
               src="https://i.ibb.co/j97ZvHRG/teddy-bear-removebg-preview.png"
               alt="Shoes"
             />
           </figure>
-          <div className="card-body">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
+          <div className="p-4">
+            <h2 className="text-secondary text-2xl font-semibold">
+              Toy :
+            </h2>
+
+            <div className="flex justify-between items-center ">
+              <p>availableQuantity :{}</p>
+              <p>Price :{}</p>
+            </div>
+            <div>
+              <h2 className="font-bold text-accent">rating</h2>
             </div>
           </div>
-        </div>
-        <div className="card bg-base-100  shadow-sm">
-          <figure>
-            <img src="https://i.ibb.co/y3xXPGF/toy2.jpg" alt="Shoes" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
+          <div className=" justify-center">
+            <button className="w-full btn btn-warning text-success text-3xl">
+              View More
+            </button>
           </div>
         </div>
-        <div className="card bg-base-100  shadow-sm">
-          <figure>
-            <img src="https://i.ibb.co/QvPnTNkS/toy3.jpg" alt="Shoes" />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Card Title</h2>
-            <p>
-              A card component has a figure, a body part, and inside body there
-              are title and actions parts
-            </p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-       
       </div>
     </div>
   );

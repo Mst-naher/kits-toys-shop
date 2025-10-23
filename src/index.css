@@ -11,6 +11,7 @@
   default: true;
 
   --color-primary: #e0dcdd;
+  --color-warning: #f5e393;
   --color-success: #59bd02;
   --color-secondary: #f56ea0;
   --color-base-200: #d6d6d6;
