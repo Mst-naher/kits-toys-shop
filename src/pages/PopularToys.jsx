@@ -1,11 +1,17 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
+import { Link, useLoaderData} from 'react-router';
 
-const toysPromise = fetch("/categories.json").then((res)=>res.json())
+const toysPromise = fetch("/toys.json").then((res)=>res.json())
 
 const PopularToys = () => {
  const popularToys = use(toysPromise);
- console.log(popularToys)
+ console.log(popularToys);
+ const data = useLoaderData();
+ console.log(data)
+ const [CategoryToy, setCategoryToy] = useState([]);
+
  
+
   return (
     <div>
       <h1 className="text-3xl font-semibold text-secondary p-3 text-center">
@@ -13,6 +19,8 @@ const PopularToys = () => {
       </h1>
       <h1>All toys are here ({popularToys.length})</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+
+
         <div className="card bg-base-100  shadow-sm">
           <figure>
             <img
@@ -35,11 +43,12 @@ const PopularToys = () => {
             </div>
           </div>
           <div className=" justify-center">
-            <button className="w-full btn btn-warning text-success text-3xl">
+            <Link to="/toyDetails" className="w-full btn btn-warning text-success text-3xl hover:bg-green-300">
               View More
-            </button>
+            </Link>
           </div>
         </div>
+       
       </div>
     </div>
   );

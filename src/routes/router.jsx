@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
 
-// import CategoryToy from "../components/CategoryToy";
-import PopularToys from "../pages/PopularToys";
+import CategoryToy from "../components/CategoryToy";
+import ToyDetails from "../pages/ToyDetails";
+// import PopularToys from "../pages/PopularToys";
 
 
 
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/popularToys/:title",
-        element: <PopularToys></PopularToys>,
+        path: "/categoryToy/:id",
+        element: <CategoryToy></CategoryToy>,
+      },
+      {
+        path: "/toyDetails",
+        element: <ToyDetails></ToyDetails>,
       },
     ],
   },
