@@ -6,6 +6,9 @@
   themes: light --default, dark --prefersdark, cupcake;
 
 }
+.my-btn{
+  @apply bg-white text-gray-800   rounded-md mt-6 py-2 hover:bg-gray-100 border-none shadow-lg hover:scale-105 transition-transform duration-200
+}
 @plugin "daisyui/theme" {
   name: "light";
   default: true;

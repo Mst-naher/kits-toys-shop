@@ -4,6 +4,9 @@ import Home from "../pages/Home";
 
 import CategoryToy from "../components/CategoryToy";
 import ToyDetails from "../pages/ToyDetails";
+import Signin from "../pages/Signin";
+import Signup from "../pages/Signup";
+import Profile from "../pages/Profile";
 // import PopularToys from "../pages/PopularToys";
 
 
@@ -14,8 +17,20 @@ const router = createBrowserRouter([
     element: <HomeLayout></HomeLayout>,
     children: [
       {
-        path: "",
-        element: <Home></Home>,
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/profile",
+        element: <Profile/>,
+      },
+      {
+        path: "/signin",
+        element: <Signin />,
+      },
+      {
+        path: "signup",
+        element: <Signup />,
       },
       {
         path: "/categoryToy/:id",

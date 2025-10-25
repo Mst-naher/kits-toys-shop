@@ -1,14 +1,14 @@
-import React, { use, useState } from 'react';
-import { Link, useLoaderData} from 'react-router';
+import React, { } from 'react';
+import { Link, } from 'react-router';
 
-const toysPromise = fetch("/toys.json").then((res)=>res.json())
+// const toysPromise = fetch("/toys.json").then((res)=>res.json())
 
 const PopularToys = () => {
- const popularToys = use(toysPromise);
- console.log(popularToys);
- const data = useLoaderData();
- console.log(data)
- const [CategoryToy, setCategoryToy] = useState([]);
+//  const popularToys = use(toysPromise);
+//  console.log(popularToys);
+//  const data = useLoaderData();
+//  console.log(data)
+//  const [CategoryToy, setCategoryToy] = useState([]);
 
  
 
@@ -17,7 +17,7 @@ const PopularToys = () => {
       <h1 className="text-3xl font-semibold text-secondary p-3 text-center">
         Our Popular Toys
       </h1>
-      <h1>All toys are here ({popularToys.length})</h1>
+      {/* <h1>All toys are here ({popularToys.length})</h1> */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
 
 

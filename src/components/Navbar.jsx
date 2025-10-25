@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="login-btn flex gap-5">
           <img src={user} alt="" />
           <button className="btn btn-secondary px-10">
-            <Link to={"signin"}>Sign in</Link>
+            <Link to={"/signin"}>Sign in</Link>
           </button>
         </div>
       </MyContainer>
