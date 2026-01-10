@@ -1,10 +1,7 @@
 import React, { Suspense } from "react";
 import Slider from "../components/Slider";
-
-import CustomerReviews from "./CustomerReviews";
-import Offers from "./Offers";
-
 import ToyContainer from "../components/ToyContainer";
+import Promotion from "./Promotion";
 
  const loadToys = () =>fetch("/toys.json").then((res)=> res.json());
 
@@ -13,23 +10,23 @@ const Home = () => {
        console.log(toysPromise);
 
   return (
-    <div className="w-11/12 mx-auto my-3">
-      {/* <h1>this is Home page</h1> */}
+    <div className="w-11/12 mx-auto my-3 ">
       <section>
         <Slider></Slider>
       </section>
-      <section >
+      <section>
         <Suspense fallback={"Loading...."}>
           <ToyContainer toysPromise={toysPromise}></ToyContainer>
         </Suspense>
       </section>
       <section>
-        <h1>CustomerReviews page </h1>
-        <CustomerReviews></CustomerReviews>
+        <div>
+        <h2 className="text-center mt-10 text-4xl text-white">Discount upto 70%</h2>
+        </div>
+        <Promotion></Promotion>
       </section>
       <section>
-        <h1>Offers </h1>
-        <Offers></Offers>
+        
       </section>
     </div>
   );

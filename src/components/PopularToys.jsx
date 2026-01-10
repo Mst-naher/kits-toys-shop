@@ -6,7 +6,7 @@ const PopularToys = ({ toys }) => {
   return (
     <div>
       <h2 className='text-center font-bold text-4xl text-amber-500 mt-7'>Popular Toys</h2>
-      <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
         {toys?.map((toy) => (
           <ToyCard key={toy.toyId} toy={toy} />
         ))}

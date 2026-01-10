@@ -6,6 +6,7 @@ import MyContainer from "./MyContainer";
 import { AuthContext } from "../context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
+// import ThemeToggle from "./ThemeToggle";
 
 
 const Navbar = () => {
@@ -42,19 +43,34 @@ const links =
   return (
     <div>
       <MyContainer className=" flex  justify-around  items-center">
-        <h1 className="md:text-md lg:text-xl md:font-md lg:font-semibold text-secondary">
+        <h1 className="md:text-md lg:text-xl md:font-md lg:font-semibold text-secondary cursor-pointer">
           Kids <span className="flex md:flex-col text-success ">Toy Shop</span>
         </h1>
         <div className="flex justify-between items-center ">
           <div>
             <ul className="flex gap-5 ">{links}</ul>
           </div>
+          {/* <div className="btn btn-secendary navbar-end btn-sm">
+            <ThemeToggle />
+          </div> */}
         </div>
 
-        <div>
-          {user ? (
+        {user ? (
+          <button
+            onClick={handleSignOutUser}
+            className=" btn btn-secondary md:px-2 lg:px-5"
+          >
+            <img
+              className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
+              src="/public/user.png"
+              alt="user"
+            />
+            Sign Out
+          </button>
+        ) : (
+          <Link to={"/signin"}>
             <button
-              onClick={handleSignOutUser}
+              // onClick={handleSigninUser}
               className="btn btn-secondary md:px-2 lg:px-5"
             >
               <img
@@ -62,24 +78,10 @@ const links =
                 src="/public/user.png"
                 alt="user"
               />
-              Sign Out
+              login
             </button>
-          ) : (
-            <Link to={"/signin"}>
-              <button
-                // onClick={handleSigninUser}
-                className="btn btn-secondary md:px-2 lg:px-5"
-              >
-                <img
-                  className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
-                  src="/public/user.png"
-                  alt="user"
-                />
-                login
-              </button>
-            </Link>
-          )}
-        </div>
+          </Link>
+        )}
       </MyContainer>
     </div>
   );

@@ -106,17 +106,6 @@
     "description": "A fun musical keyboard that introduces kids to sounds, rhythm, and basic music skills.",
     "pictureURL": "https://i.ibb.co/p6FdSNq4/musical.jpg",
     "subCategory": "Musical Toys"
-  },
-  {
-    "toyId": 10,
-    "toyName": "Kids Doctor Play Set",
-    "sellerName": "RolePlay Fun",
-    "sellerEmail": "contact@roleplayfun.com",
-    "price": 26.99,
-    "rating": 4.4,
-    "availableQuantity": 50,
-    "description": "A doctor play set that encourages role-playing, empathy, and imagination.",
-    "pictureURL": "https://i.ibb.co/0VtDgv2d/4132-Vwgkn0-L-AC-UF894-1000-QL80.jpg",
-    "subCategory": "Role Play"
   }
+ 
 ]

@@ -25,42 +25,50 @@ function Slider() {
           <img
             src="/slide-1.png"
             alt="Slide 1"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="/basket-ball.jpg"
+            src="/pop_satisfaction.jpg"
             alt="Slide 2"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="/1.png"
+            alt="Slide 3"
+            className="w-full h-[700px] object-cover bg-gray-100"
+          />
+        </SwiperSlide>
+
         <SwiperSlide>
           <img
             src="/slider-2.png"
-            alt="Slide 3"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            alt="Slide 4"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="/lego.jpg"
-            alt="Slide 4"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            alt="Slide 5"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="/racing-car.jpg"
-            alt="Slide 5"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            alt="Slide 6"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             src="/musical.jpg"
-            alt="Slide 6"
-            className="w-full h-[500px] object-contain bg-gray-100"
+            alt="Slide 7"
+            className="w-full h-[700px] object-cover bg-gray-100"
           />
         </SwiperSlide>
       </Swiper>

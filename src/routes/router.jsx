@@ -8,9 +8,8 @@ import ForgetPassword from "../pages/ForgetPassword";
 import PopularToys from "../components/PopularToys";
 import ToyContainer from "../components/ToyContainer";
 import ToyDetails from "../pages/ToyDetails";
-
-
-
+import Promotion from "../pages/Promotion";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 
 const router = createBrowserRouter([
@@ -28,15 +27,22 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "loadingSpinner",
+        element: <LoadingSpinner />,
+      },
+      {
         path: "toyContainer",
         element: <ToyContainer />,
       },
       {
         path: "popularToys",
         element: <PopularToys />,
-        
       },
-     
+      {
+        path: "promotion",
+        element: <Promotion />,
+      },
+
       {
         path: "profile",
         element: <Profile />,
@@ -55,7 +61,7 @@ const router = createBrowserRouter([
       },
       {
         path: "forgetPassword",
-        element: <ForgetPassword/>,
+        element: <ForgetPassword />,
       },
     ],
   },

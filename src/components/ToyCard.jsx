@@ -3,12 +3,12 @@ import { Link } from 'react-router';
 
 const ToyCard = ({ toy }) => {
   return (
-    <div className="card bg-base-100 rounded-xl shadow-xl space-y-3 mt-10">
-      <figure className="h-80 overflow-hidden">
+    <div className="card bg-base-100 rounded-xl shadow-2xl  mt-10 hover:animate-pulse cursor-pointer">
+      <figure className="h-50 overflow-hidden">
         <img
-          className="w-full h-full object-cover"
+          className="w-[700px] h-[400px] object-cover"
           src={toy.pictureURL}
-          alt={""}
+          alt={"toy"}
         />
       </figure>
       <div className="card-body bg-gray-200">
