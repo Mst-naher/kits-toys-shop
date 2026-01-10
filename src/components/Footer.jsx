@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="w-11/12 mx-auto footer footer-horizontal footer-center bg-secondary text-primary-content p-10">
         <aside>
           <div className="flex flex-col">
-            <img className="w-100 h-30 ml-7" src="../assets/logo-3.png" alt="" />
+            <img className="w-100 h-30 ml-7" src="/logo-3.png" alt="" />
             <h3 className=" text-xl font-semibold p-1">
               {/* <span className=" bg-liner-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
                 HERO.IO

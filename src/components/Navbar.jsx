@@ -1,40 +1,84 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router';
-import user from "/assets/user.png"
-import MyContainer from './MyContainer';
-import MyLink from './MyLink';
+import React, { useContext } from "react";
+import { Link, NavLink } from "react-router";
+
+import MyContainer from "./MyContainer";
+
+import { AuthContext } from "../context/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase/firebase.config";
 
 
 const Navbar = () => {
+ const { user } = useContext(AuthContext);
+ console.log(user);
+
+
+const handleSignOutUser = () => {
+  signOut(auth)
+  .then(()=>{
+    console.log("signout is done")
+    // setUser(null)
+  })
+  .catch((error)=>{
+    console.log(error)
+  })
+};
+
+
+const links = 
+  <>
+    <li>
+      <NavLink to={"/"} className="">
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink to={"/profile"} className="">
+        Profile
+      </NavLink>
+    </li>
+  </>
+
   return (
     <div>
-      <MyContainer className="flex justify-between items-center">
+      <MyContainer className=" flex  justify-around  items-center">
+        <h1 className="md:text-md lg:text-xl md:font-md lg:font-semibold text-secondary">
+          Kids <span className="flex md:flex-col text-success ">Toy Shop</span>
+        </h1>
+        <div className="flex justify-between items-center ">
+          <div>
+            <ul className="flex gap-5 ">{links}</ul>
+          </div>
+        </div>
+
         <div>
-          <h1 className="text-xl font-semibold text-secondary">
-            Kids <span className="text-success">Toy Shop</span>
-          </h1>
-        </div>
-        <div className=" ">
-          <ul className="flex gap-5 ">
-            <li>
-              <MyLink to={"/"} className="">
-               
-                Home
-              </MyLink>
-            </li>
-            <li>
-              <MyLink to={"/profile"} className="">
-               
-                Profile
-              </MyLink>
-            </li>
-          </ul>
-        </div>
-        <div className="login-btn flex gap-5">
-          <img src={user} alt="" />
-          <button className="btn btn-secondary px-10">
-            <Link to={"/signin"}>Sign in</Link>
-          </button>
+          {user ? (
+            <button
+              onClick={handleSignOutUser}
+              className="btn btn-secondary md:px-2 lg:px-5"
+            >
+              <img
+                className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
+                src="/public/user.png"
+                alt="user"
+              />
+              Sign Out
+            </button>
+          ) : (
+            <Link to={"/signin"}>
+              <button
+                // onClick={handleSigninUser}
+                className="btn btn-secondary md:px-2 lg:px-5"
+              >
+                <img
+                  className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
+                  src="/public/user.png"
+                  alt="user"
+                />
+                login
+              </button>
+            </Link>
+          )}
         </div>
       </MyContainer>
     </div>

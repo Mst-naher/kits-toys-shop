@@ -1,197 +1,122 @@
 [
   {
-    "id": "2",
-    "category": 16,
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
     "sellerName": "Toys R Us Local",
     "sellerEmail": "contact@toysruslocal.com",
     "price": 49.99,
+    "rating": 4.7,
     "availableQuantity": 75,
-    "title": "STEM Robotics Learning Kit",
-    "rating": {
-      "number": 4.8,
-      "badge": "trending"
-    },
-    "view": 4521,
-    "author": {
-      "name": "PlaySmart Ltd.",
-      "published_date": "2025-03-12T10:30:00.000Z",
-      "img": "https://randomuser.me/api/portraits/men/45.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/y3xXPGF/toy2.jpg",
-    "image": "https://i.ibb.co/j97ZvHRG/teddy-bear-removebg-preview.png",
-    "details": "The STEM Robotics Learning Kit by PlaySmart Ltd. is an innovative educational toy that combines fun, creativity, and technology to teach children about robotics, coding, and basic engineering concepts. Designed for kids aged eight and above, this comprehensive kit includes everything needed to build and program multiple robotic models, from simple moving vehicles to interactive robots that respond to sensors. The components are durable, easy to assemble, and color-coded for clarity, helping children develop logical thinking and problem-solving skills as they follow step-by-step guides. The kit also includes an intuitive app that introduces coding through interactive lessons using drag-and-drop programming blocks, making it accessible even to beginners. Beyond coding, children learn how mechanical systems work through gears, motors, and sensors. Every completed project builds confidence and a sense of achievement, turning abstract STEM concepts into real-life applications. Teachers and parents love how this kit promotes teamwork, patience, and curiosity, all while keeping screen time educational and purposeful. With over 100 possible projects, kids can continuously challenge themselves by designing new robot variations and experimenting with different programming patterns. The STEM Robotics Learning Kit fosters a lifelong interest in science and technology, making it an excellent resource for home learning or classroom enrichment. All materials are child-safe and meet international safety standards, ensuring peace of mind for parents. It’s not just a toy—it’s a foundation for future innovators, engineers, and problem-solvers ready to explore tomorrow’s world through play.",
-    "tags": ["STEM", "educational", "robotics", "coding"],
-    "others": {
-      "is_today_pick": true,
-      "is_trending": true
-    },
-    "production": true
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine.",
+    "pictureURL": "https://i.ibb.co/zg7Qb7L/a63e1a27-ac25-495e-8902-bf844ac6ae53.jpg",
+    "subCategory": "Building Blocks"
   },
   {
-    "id": "1",
-    "category": 11,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "availableQuantity": 75,
-    "title": "Cuddly Teddy Bear Plush Toy",
-    "rating": {
-      "number": 4.5,
-      "badge": "popular"
-    },
-    "view": 3876,
-    "author": {
-      "name": "SoftDream Toys",
-      "published": "2025-02-20T14:00:00.000Z",
-      "img": "https://randomuser.me/api/portraits/women/33.jpg"
-    },
-    "thumbnail_url": "https://i.ibb.co/j97ZvHRG/teddy-bear-removebg-preview.png",
-    "image": "https://i.ibb.co/j97ZvHRG/teddy-bear-removebg-preview.png",
-    "details": "The Cuddly Teddy Bear Plush Toy by SoftDream Toys is a timeless favorite that brings warmth, comfort, and joy to children and adults alike. Carefully crafted from ultra-soft, high-quality plush fabric, this teddy bear is designed for endless cuddles and companionship. Its huggable design, gentle facial expression, and premium stuffing make it the perfect bedtime buddy for children of all ages. The teddy’s fur is hypoallergenic and washable, ensuring it stays clean and safe for everyday use. Measuring approximately 18 inches tall, it’s large enough to hug yet light enough for little hands to carry around with ease. Beyond being adorable, this teddy bear plays a meaningful role in emotional development—providing security, comfort, and a sense of friendship. Parents often notice how children express feelings, share secrets, and practice empathy through imaginative play with their teddy. Whether sitting on a nursery shelf or joining a tea party, it adds warmth to any setting. Each bear is stitched with care and quality-checked to ensure long-lasting durability, even through years of hugs and adventures. Ideal as a birthday, holiday, or newborn gift, the Cuddly Teddy Bear Plush Toy is a beautiful reminder of love and comfort that never goes out of style. It’s not just a stuffed toy—it’s a loyal friend that becomes part of cherished childhood memories, ready to share in laughter, comfort tears, and be loved unconditionally for years to come.",
-    "tags": ["plush", "soft toy", "teddy bear", "gift"],
-    "others": {
-      "is_today_pick": false,
-      "is_trending": true
-    },
-    "production": true
+    "toyId": 2,
+    "toyName": "Remote Control Racing Car",
+    "sellerName": "Speedy Toys",
+    "sellerEmail": "support@speedytoys.com",
+    "price": 34.99,
+    "rating": 4.5,
+    "availableQuantity": 40,
+    "description": "A fast and durable remote control racing car with responsive steering and long battery life.",
+    "pictureURL": "https://i.ibb.co/S4jdwW9P/251019201409-3b9b794d1891b1bb1ba5d02b2f94e2ce.png",
+    "subCategory": "Remote Control"
   },
   {
-    "id": "3",
-    "category": 15,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "availableQuantity": 75,
-    "title": "Outdoor Kids Sports Set",
-    "rating": {
-      "number": 4.2,
-      "badge": "featured"
-    },
-    "view": 2560,
-    "author": {
-      "name": "ActivePlay Co.",
-      "published": "2025-05-10T09:15:00.000Z",
-      "img": "https://randomuser.me/api/portraits/men/22.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/QvPnTNkS/toy3.jpg",
-    "image": "https://i.ibb.co/QvPnTNkS/toy3.jpg",
-    "details": "The Outdoor Kids Sports Set from ActivePlay Co. is the perfect all-in-one activity kit for energetic children who love to move, play, and explore the outdoors. Designed for kids aged five to ten, this durable sports set includes a mini football, basketball, skipping rope, flying disc, and soft safety cones for setting up games and obstacle courses. Each piece is crafted from lightweight, non-toxic, and child-safe materials built to withstand rough play while keeping safety a top priority. The set encourages physical activity, coordination, and teamwork through various fun challenges that can be played alone or with friends. Parents appreciate how this sports kit motivates kids to leave screens behind and enjoy healthy outdoor fun. The colorful design captures children’s attention, while the variety of items ensures hours of entertainment for siblings or playgroups. Whether it’s a backyard mini tournament, a family picnic, or a park day with friends, this set promotes endurance, balance, and agility. The sports bag included makes cleanup and transportation easy, keeping all equipment neatly organized. Beyond fitness, kids also learn about sharing, fair play, and friendly competition—essential social skills developed through physical play. The Outdoor Kids Sports Set is an ideal gift for birthdays, holidays, or any occasion that celebrates active living. With endless play options, it transforms ordinary spaces into exciting playgrounds that inspire movement and laughter. Every game becomes a new adventure with this versatile, long-lasting kit designed to grow with your child’s energy and enthusiasm.",
-    "tags": ["sports", "outdoor", "fitness", "teamwork"],
-    "others": {
-      "is_today_pick": true,
-      "is_trending": false
-    },
-    "production": true
+    "toyId": 3,
+    "toyName": "Wooden Puzzle Set",
+    "sellerName": "Smart Kids Toys",
+    "sellerEmail": "info@smartkidstoys.com",
+    "price": 19.99,
+    "rating": 4.6,
+    "availableQuantity": 60,
+    "description": "A colorful wooden puzzle set designed to improve problem-solving and hand-eye coordination.",
+    "pictureURL": "https://i.ibb.co/sv3HSZ6T/educational1.png",
+    "subCategory": "Educational"
   },
   {
-    "id": "4",
-    "category": 14,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "availableQuantity": 75,
-    "title": "Creative Art & Craft Box",
-    "rating": {
-      "number": 4.7,
-      "badge": "bestseller"
-    },
-    "view": 5890,
-    "author": {
-      "name": "ArtFun Studio",
-      "published_date": "2025-04-05T11:45:00.000Z",
-      "img": "https://randomuser.me/api/portraits/women/42.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/bjVNZ8Fj/toy4.jpg",
-    "image": "https://i.ibb.co/bjVNZ8Fj/toy4.jpg",
-    "details": "The Creative Art & Craft Box by ArtFun Studio is the ultimate starter kit for young artists who love to explore, imagine, and create. This all-in-one set is designed to inspire hours of hands-on fun while helping children build confidence in their artistic abilities. Inside the box, kids will find an exciting collection of art supplies including watercolors, acrylic paints, sketching pencils, markers, glitter glue, craft paper, stickers, ribbons, and decorative beads. Everything is neatly organized and safely packed, making it easy for kids to start their next art project without any mess or confusion. Suitable for children aged six and above, this kit encourages self-expression and creativity through open-ended play. Whether it’s painting, drawing, or crafting, each activity helps enhance fine motor skills, hand-eye coordination, and concentration. Parents and teachers will appreciate how this art set supports educational growth while keeping kids entertained away from screens. The materials are child-safe, non-toxic, and washable, ensuring peace of mind during playtime. The reusable storage box is designed for long-lasting use, allowing kids to keep their art essentials tidy and ready for future projects. It’s perfect for home use, school activities, birthday parties, and family craft days. This craft box makes a thoughtful and inspiring gift for both boys and girls who enjoy expressing their creativity. From simple doodles to advanced projects, every creation becomes a proud achievement. The Creative Art & Craft Box turns imagination into reality and provides a wonderful opportunity for children to explore their artistic side in a fun, engaging, and educational way.",
-    "tags": ["crafts", "art", "DIY", "creative"],
-    "others": {
-      "is_today_pick": false,
-      "is_trending": true
-    },
-    "production": true
+    "toyId": 4,
+    "toyName": "STEM Robotics Kit",
+    "sellerName": "PlaySmart",
+    "sellerEmail": "contact@playsmart.com",
+    "price": 59.99,
+    "rating": 4.8,
+    "availableQuantity": 30,
+    "description": "An educational robotics kit that introduces kids to coding, engineering, and robotics concepts.",
+    "pictureURL": "https://i.ibb.co/y3xXPGF/toy2.jpg",
+    "subCategory": "STEM Toys"
   },
   {
-    "id": "5",
-    "category": 12,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "title": "Alphabet Learning Tablet",
-    "rating": {
-      "number": 4.6,
-      "badge": "popular"
-    },
-    "view": 3820,
-    "author": {
-      "name": "EduPlay Co.",
-      "published": "2025-02-05T09:15:00.000Z",
-      "img": "https://randomuser.me/api/portraits/women/21.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/zVjkDVvH/Alphabet1.png",
-    "image": "https://i.ibb.co/zVjkDVvH/Alphabet1.png",
-    "details": "The Alphabet Learning Tablet by EduPlay Co. introduces children to letters, words, and sounds through fun, interactive play. Designed for preschoolers aged 3 and above, it features touch-sensitive buttons, cheerful voice prompts, and colorful visuals to keep young learners engaged. The tablet includes alphabet games, spelling challenges, and early phonics activities that help develop literacy and cognitive skills. Its durable, lightweight design makes it perfect for both home and classroom use. With adjustable volume and auto power-off features, it’s safe, child-friendly, and battery-efficient. Parents and educators appreciate how this toy blends technology with education, turning screen-free playtime into a meaningful learning experience.",
-    "tags": ["educational", "literacy", "learning", "interactive"],
-    "others": {
-      "is_today_pick": true,
-      "is_trending": false
-    },
-    "production": true
+    "toyId": 5,
+    "toyName": "Stuffed Teddy Bear",
+    "sellerName": "Happy Plush",
+    "sellerEmail": "hello@happyplush.com",
+    "price": 24.99,
+    "rating": 4.4,
+    "availableQuantity": 120,
+    "description": "A soft and cuddly teddy bear made from child-safe, hypoallergenic materials.",
+    "pictureURL": "https://i.ibb.co/j97ZvHRG/teddy-bear-removebg-preview.png",
+    "subCategory": "Soft Toys"
   },
   {
-    "id": "0",
-    "category": 13,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "availableQuantity": 75,
-    "title": "Mini Electric Keyboard for Kids",
-    "rating": {
-      "number": 4.7,
-      "badge": "featured"
-    },
-    "view": 3950,
-    "author": {
-      "name": "MelodyMakers Inc.",
-      "published": "2025-04-10T13:45:00.000Z",
-      "img": "https://randomuser.me/api/portraits/men/33.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/p6FdSNq4/musical.jpg",
-    "image": "https://i.ibb.co/p6FdSNq4/musical.jpg",
-    "details": "The Mini Electric Keyboard for Kids by MelodyMakers Inc. helps children explore their musical talents with ease and joy. This compact keyboard features 32 mini keys, built-in demo songs, and fun sound effects designed for small hands and big creativity. Kids can learn basic music concepts like rhythm, notes, and melody while experimenting with different tones. The keyboard includes a record-and-play function, adjustable tempo, and a headphone jack for quiet playtime. With its vibrant design and easy-to-use controls, it encourages self-expression, hand-eye coordination, and auditory development. Ideal for children aged 4 and above, it’s a perfect introduction to the world of music.",
-    "tags": ["musical", "keyboard", "learning", "interactive"],
-    "others": {
-      "is_today_pick": false,
-      "is_trending": true
-    },
-    "production": true
+    "toyId": 6,
+    "toyName": "Kids Art & Craft Box",
+    "sellerName": "Creative Hands",
+    "sellerEmail": "support@creativehands.com",
+    "price": 29.99,
+    "rating": 4.6,
+    "availableQuantity": 55,
+    "description": "An all-in-one art and craft box with colors, stickers, papers, and tools for creativity.",
+    "pictureURL": "https://i.ibb.co/pv72f3X8/6944adb30f6c6402b208e55f-a-r-co-3000-pcs-arts-and-crafts.jpg",
+    "subCategory": "Arts & Crafts"
   },
   {
-    "id": "6",
-    "category": 10,
-    "sellerName": "Toys R Us Local",
-    "sellerEmail": "contact@toysruslocal.com",
-    "price": 49.99,
-    "availableQuantity": 75,
-    "title": "Toddler Drum & Rhythm Set",
-    "rating": {
-      "number": 4.5,
-      "badge": "popular"
-    },
-    "view": 3415,
-    "author": {
-      "name": "TinyBeats Toys",
-      "published": "2025-05-08T15:20:00.000Z",
-      "img": "https://randomuser.me/api/portraits/women/29.jpg"
-    },
-    "thumbnail": "https://i.ibb.co/LdCrxNn/musical-toy2.jpg",
-    "image": "https://i.ibb.co/Tq9pRvD/drum-set.png",
-    "details": "The Toddler Drum & Rhythm Set by TinyBeats Toys introduces children to rhythm and music through joyful, hands-on play. Featuring a colorful drum, tambourine, maracas, and cymbals, it’s designed for toddlers aged 2 and above to explore sound, tempo, and coordination. Each piece is made of durable, non-toxic materials with smooth edges for safe play. The set helps develop auditory skills, motor coordination, and creative expression as kids experiment with beats and sounds. Perfect for group play or solo fun, it encourages teamwork and communication through shared musical experiences. Parents love how it keeps little ones active and entertained while nurturing a love for music early on.",
-    "tags": ["musical", "drum", "toddler", "learning"],
-    "others": {
-      "is_today_pick": true,
-      "is_trending": false
-    },
-    "production": true
+    "toyId": 7,
+    "toyName": "Mini Basketball Hoop",
+    "sellerName": "Active Kids",
+    "sellerEmail": "sales@activekids.com",
+    "price": 27.99,
+    "rating": 4.3,
+    "availableQuantity": 45,
+    "description": "An indoor mini basketball hoop that helps kids stay active and improve coordination.",
+    "pictureURL": "https://i.ibb.co/Nn9knLtS/71-KNfcnbkg-L-AC-SY300-SX300-QL70-ML2.jpg",
+    "subCategory": "Sports Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Dinosaur Action Figures",
+    "sellerName": "Jurassic Toys",
+    "sellerEmail": "info@jurassictoys.com",
+    "price": 22.99,
+    "rating": 4.5,
+    "availableQuantity": 70,
+    "description": "A set of realistic dinosaur action figures perfect for imaginative play.",
+    "pictureURL": "https://i.ibb.co/k2X4hYxF/dino-27177-original.jpg",
+    "subCategory": "Action Figures"
+  },
+  {
+    "toyId": 9,
+    "toyName": "Kids Musical Keyboard",
+    "sellerName": "Music World",
+    "sellerEmail": "support@musicworld.com",
+    "price": 39.99,
+    "rating": 4.6,
+    "availableQuantity": 35,
+    "description": "A fun musical keyboard that introduces kids to sounds, rhythm, and basic music skills.",
+    "pictureURL": "https://i.ibb.co/p6FdSNq4/musical.jpg",
+    "subCategory": "Musical Toys"
+  },
+  {
+    "toyId": 10,
+    "toyName": "Kids Doctor Play Set",
+    "sellerName": "RolePlay Fun",
+    "sellerEmail": "contact@roleplayfun.com",
+    "price": 26.99,
+    "rating": 4.4,
+    "availableQuantity": 50,
+    "description": "A doctor play set that encourages role-playing, empathy, and imagination.",
+    "pictureURL": "https://i.ibb.co/0VtDgv2d/4132-Vwgkn0-L-AC-UF894-1000-QL80.jpg",
+    "subCategory": "Role Play"
   }
 ]

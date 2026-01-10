@@ -1,11 +1,13 @@
 import React from 'react';
-import { Outlet } from 'react-router';
+import { Outlet,  } from 'react-router';
 import Header from '../components/Header';
 import Slider from '../components/Slider';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const HomeLayout = () => {
+//  const navigation = useNavigation()
+// console.log(navigation)
   return (
     <div>
       <header className="w-11/12 mx-auto bg-base-200">

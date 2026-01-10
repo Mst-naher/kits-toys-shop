@@ -1,13 +1,15 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
-
-import CategoryToy from "../components/CategoryToy";
-import ToyDetails from "../pages/ToyDetails";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
 import Profile from "../pages/Profile";
-// import PopularToys from "../pages/PopularToys";
+import ForgetPassword from "../pages/ForgetPassword";
+import PopularToys from "../components/PopularToys";
+import ToyContainer from "../components/ToyContainer";
+import ToyDetails from "../pages/ToyDetails";
+
+
 
 
 
@@ -15,17 +17,32 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
+
     children: [
       {
         index: true,
         element: <Home />,
       },
       {
-        path: "/profile",
-        element: <Profile/>,
+        path: "home",
+        element: <Home />,
       },
       {
-        path: "/signin",
+        path: "toyContainer",
+        element: <ToyContainer />,
+      },
+      {
+        path: "popularToys",
+        element: <PopularToys />,
+        
+      },
+     
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "signin",
         element: <Signin />,
       },
       {
@@ -33,12 +50,12 @@ const router = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: "/categoryToy/:id",
-        element: <CategoryToy></CategoryToy>,
+        path: "toyDetails/:id",
+        element: <ToyDetails />,
       },
       {
-        path: "/toyDetails",
-        element: <ToyDetails></ToyDetails>,
+        path: "forgetPassword",
+        element: <ForgetPassword/>,
       },
     ],
   },
@@ -51,7 +68,7 @@ const router = createBrowserRouter([
     element: <h2>Toys Layout</h2>,
   },
   {
-    path: "/*",
+    path: "*",
     element: <h2>Error440</h2>,
   },
 ]);
