@@ -10,6 +10,7 @@ import ToyContainer from "../components/ToyContainer";
 import ToyDetails from "../pages/ToyDetails";
 import Promotion from "../pages/Promotion";
 import LoadingSpinner from "../components/LoadingSpinner";
+import CustomersSlider from "../pages/CustomersSlider";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "promotion",
         element: <Promotion />,
+      },
+      {
+        path: "customersSlider",
+        element: <CustomersSlider />,
       },
 
       {

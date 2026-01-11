@@ -22,7 +22,7 @@ function Slider() {
         className="lg:rounded-lg overflow-hidden"
       >
         <SwiperSlide>
-          <img
+          <img 
             src="/slide-1.png"
             alt="Slide 1"
             className="w-full h-[700px] object-cover bg-gray-100"
