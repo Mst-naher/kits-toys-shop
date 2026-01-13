@@ -11,6 +11,9 @@ import ToyDetails from "../pages/ToyDetails";
 import Promotion from "../pages/Promotion";
 import LoadingSpinner from "../components/LoadingSpinner";
 import CustomersSlider from "../pages/CustomersSlider";
+import Cart from "../pages/Cart";
+import NotFoundPage from "../components/NotFoundPage";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -47,10 +50,16 @@ const router = createBrowserRouter([
         path: "customersSlider",
         element: <CustomersSlider />,
       },
+      {
+        path: "cart",
+        element: <Cart/>,
+      },
 
       {
         path: "profile",
-        element: <Profile />,
+         element: (<PrivateRoute>
+           <profile/>
+         </PrivateRoute>),
       },
       {
         path: "signin",
@@ -74,13 +83,10 @@ const router = createBrowserRouter([
     path: "/auth",
     element: <h2>Authentication Layout</h2>,
   },
-  {
-    path: "/toys",
-    element: <h2>Toys Layout</h2>,
-  },
+ 
   {
     path: "*",
-    element: <h2>Error440</h2>,
+    element: <NotFoundPage />
   },
 ]);
 

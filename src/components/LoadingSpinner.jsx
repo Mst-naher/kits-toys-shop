@@ -1,10 +1,10 @@
 import React from 'react';
-// import {FadeLoader} from 'react-spinner'
+import { ClimbingBoxLoader } from "react-spinners";
 const LoadingSpinner = () => {
   return (
-    <div className="flex justify-center item-center mt-[200px]">
-      <p className='text-5xl'>Loading.....</p>
-      {/* <FadeLoader /> */}
+    <div className=" h-[97vh] flex item-center justify-center ">
+      {/* <p className="text-5xl text-amber-500 ">Loading.....</p> */}
+      <ClimbingBoxLoader />
     </div>
   );
 };

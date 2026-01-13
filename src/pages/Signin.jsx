@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import MyContainer from "../components/MyContainer";
 import { FcGoogle } from "react-icons/fc";
 import { IoEyeOff } from "react-icons/io5";
@@ -15,12 +15,19 @@ import { auth } from "../firebase/firebase.config";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
 
-const googleProvider = new GoogleAuthProvider();
+
 
 const Signin = () => {
-  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
   const [show, setShow] = useState(false);
-   const { signInWithEmailAndPasswordFunc } = useContext(AuthContext);
+   const {
+     signInWithEmailAndPasswordFunc,
+     signInWithEmailFunc,
+    
+     sendPasswordResetEmailFunc,
+     setLoading,
+     setUser,
+   } = useContext(AuthContext);
 
   const emailRef = useRef(null);
 
@@ -33,48 +40,43 @@ const Signin = () => {
     signInWithEmailAndPasswordFunc( email, password)
       .then((res) => {
         console.log(res);
+        setLoading(false);
         setUser(res.user);
+        e.target.reset();
         toast.success("Signin successful");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
-        toast.error(e.messase);
+        toast.error("Firebase: Error (auth/invalid-credential)");
       });
   };
 
   const handleGoogleSignin = () => {
     console.log("goole signing");
-    signInWithPopup(auth, googleProvider)
+    signInWithEmailFunc()
       .then((res) => {
         console.log(res);
+        setLoading(false);
         setUser(res.user);
         toast.success("Signin successful");
       })
       .catch((e) => {
         console.log(e);
-        toast.error(e.messase);
+        toast.error("e.messase");
       });
   };
 
-  const handleSignout = () => {
-    signOut(auth)
-      .then(() => {
-        toast.success("Signout successful");
-        setUser(null);
-      })
-      .catch((error) => {
-        console.log('error is happend', error);
-        toast.error(error.messase);
-      });
-  };
+ 
 
-  const handleForgetPassword = (e) => {
-    e.preventDefault();
-    console.log(e.target.email);
+  const handleForgetPassword = () => {
+  
+    console.log();
     // console.log(email)
     const email = emailRef.current.value;
-    sendPasswordResetEmail(auth, email)
+    sendPasswordResetEmailFunc(email)
       .then((res) => {
+        setLoading(false);
         toast.success("Check your email to reset the password");
       })
       .catch((e) => {
@@ -89,28 +91,10 @@ const Signin = () => {
         <div className="card bg-base-100 w-full mx-auto max-w-sm m-10 shadow-2xl">
           <div className="card-body p-5">
             <h1 className="text-3xl font-bold">Please Singin </h1>
-            {user ? (
-              <div className="text-center space-y-3 bg-amber-200 p-5">
-                <img
-                  src={user?.photoURL || "https://via.placeholder.com/88"}
-                  className="h-20 w-20 rounded-full mx-auto"
-                  alt=""
-                />
-                <h2 className="text-xl font-semibold mb-2 text-center text-white">
-                  {user?.displayName}
-                </h2>
-                <p className="text-red/80">{user?.email}</p>
-                <button
-                  onClick={handleSignout}
-                  className="btn btn-bg-base mt-4 w-full text-gray-800 text-xl my-btn"
-                >
-                  Sign Out
-                </button>
-              </div>
-            ) : (
+           
               <form onSubmit={handleSignin}>
                 {/* Email field */}
-
+                <h2 className="text-3xl font-bold"> Singin </h2>
                 <div className="mt-4">
                   <label className="block text-sm mb-1">Email</label>
                   <input
@@ -180,7 +164,7 @@ const Signin = () => {
                   </Link>
                 </div>
               </form>
-            )}
+         
           </div>
         </div>
       </div>

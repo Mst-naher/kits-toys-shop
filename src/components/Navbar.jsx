@@ -1,45 +1,69 @@
-import React, { useContext } from "react";
-import { Link, NavLink } from "react-router";
+import React, { use,  } from "react";
+import { Link,  } from "react-router";
 
 import MyContainer from "./MyContainer";
 
 import { AuthContext } from "../context/AuthContext";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase/firebase.config";
+// import { signOut } from "firebase/auth";
+// import { auth } from "../firebase/firebase.config";
+import { ShoppingCart } from "lucide-react";
+import { CartContext } from "../Providers/CartContext";
+import MyLink from "./MyLink";
+import toast from "daisyui/components/toast";
+import { ClockLoader } from "react-spinners";
+
 // import ThemeToggle from "./ThemeToggle";
 
 
 const Navbar = () => {
- const { user } = useContext(AuthContext);
- console.log(user);
+  //const result = useContext(AuthContext);
+  const { user, signoutUserFunc, setUser, loading, setLoading } = use(AuthContext);
+  console.log(user);
+  const {cart, setCart} = use(CartContext);
+
+// const handleSigninUser =()=>{
+
+// }
+
+ const handleSignout = () => {
+    signoutUserFunc()
+      .then(() => {
+        toast.success("Signout successful");
+        setUser(null);
+      })
+      .catch((error) => {
+        console.log("error is happend", error);
+        toast.error("error.messase");
+      });
+  };
 
 
-const handleSignOutUser = () => {
-  signOut(auth)
-  .then(()=>{
-    console.log("signout is done")
-    // setUser(null)
-  })
-  .catch((error)=>{
-    console.log(error)
-  })
-};
-
-
-const links = 
+const links = (
   <>
     <li>
-      <NavLink to={"/"} className="">
+      <MyLink to={"/"} className="">
         Home
-      </NavLink>
+      </MyLink>
     </li>
+      {user && (
     <li>
-      <NavLink to={"/profile"} className="">
-        Profile
-      </NavLink>
+        <MyLink to={"profile"} className="">
+          Profile
+        </MyLink>
+    </li>
+      )}
+    <li>
+      <MyLink to={"/cart"} className="">
+        <div className="relative">
+          <ShoppingCart />
+          <p className="absolute -top-3 -right-3">{cart.length}</p>
+        </div>
+      </MyLink>
     </li>
   </>
+);
 
+console.log(loading)
   return (
     <div>
       <MyContainer className=" flex  justify-around  items-center">
@@ -55,32 +79,47 @@ const links =
           </div> */}
         </div>
 
-        {user ? (
-          <button
-            onClick={handleSignOutUser}
-            className=" btn btn-secondary md:px-2 lg:px-5"
-          >
-            <img
-              className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
-              src="/public/user.png"
-              alt="user"
-            />
-            Sign Out
-          </button>
-        ) : (
-          <Link to={"/signin"}>
+        {loading ? (
+          <ClockLoader color="#e74c3c"/>
+        ) : user ? (
+          <div className="text-center space-y-3 ">
+            {/* //Daisy */}
             <button
-              // onClick={handleSigninUser}
-              className="btn btn-secondary md:px-2 lg:px-5"
+              className="btn"
+              popoverTarget="popover-1"
+              style={{ anchorName: "--anchor-1" } /* as React.CSSProperties */}
             >
               <img
-                className="md:h-5 md:w-5 lg:h-8 lg:w-8 rounded-full cursor-pointer"
-                src="/public/user.png"
+                src={user?.photoURL || "/demo-user.png"}
+                className="h-[40px] w-[40px] rounded-full mx-auto"
                 alt="user"
               />
-              login
             </button>
-          </Link>
+
+            <div
+              className="dropdown menu w-52 rounded-box bg-base-100 shadow-sm"
+              popover="auto"
+              id="popover-1"
+              style={
+                { positionAnchor: "--anchor-1" } /* as React.CSSProperties */
+              }
+            >
+              <h2 className="text-xl font-semibold mb-2 text-center text-white">
+                {user?.displayName}
+              </h2>
+              <p className="text-red/80">{user?.email}</p>
+              <button
+                onClick={handleSignout}
+                className="btn btn-bg-base mt-4 w-full text-gray-800 text-xl my-btn"
+              >
+                Sign Out
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button className="btn btn-secondary md:px-2 lg:px-5">
+            <Link to={"/signin"}> login</Link>
+          </button>
         )}
       </MyContainer>
     </div>
